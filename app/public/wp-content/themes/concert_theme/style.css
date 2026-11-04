@@ -1,0 +1,689 @@
+/*
+Theme Name: Concert Theme
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f4f1;
+    color: #1f1f1f;
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    background-color: #181818;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-small {
+    background-color: pink;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* MAIN CONTENT */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin: 0;
+}
+
+
+/* CONCERT GRID */
+
+.concert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* CONCERT CARD */
+
+.concert-card {
+    background-color: white;
+    padding: 30px;
+
+    min-height: 220px;
+
+    border-radius: 4px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.concert-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.concert-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.concert-card h3 a,
+.concert-card > a:first-child {
+    color: #1f1f1f;
+    text-decoration: none;
+}
+
+.concert-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: #1f1f1f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #181818;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+/* SINGLE CONCERT PAGE */
+
+.single-concert {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+.concert-detail {
+    background-color: white;
+    padding: 50px;
+}
+
+.concert-detail h1 {
+    font-size: 48px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.concert-content {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.back-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+
+/* HOMEPAGE */
+
+.home-hero {
+    min-height: 450px;
+    background: linear-gradient(135deg, #191923, #35304d);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #a69ad8;
+}
+
+.home-hero h1 {
+    font-size: clamp(38px, 6vw, 70px);
+    margin: 18px 0;
+}
+
+.home-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #e0dce9;
+}
+
+.hero-button,
+.outline-button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.hero-button {
+    background: #b6a5ed;
+    color: #191923;
+}
+
+.hero-button:hover {
+    background: #d1c4fa;
+}
+
+/* SECTIONS */
+
+.home-section {
+    padding: 75px 25px;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-section h2 {
+    font-size: 36px;
+    margin: 10px 0 35px;
+}
+
+/* CATEGORY CARDS */
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.year-card {
+    background: #302b43;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 45px 20px;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.year-card h3 {
+    font-size: 28px;
+    margin: 0 0 15px;
+}
+
+.year-card span {
+    color: #c8b9f4;
+    font-size: 14px;
+}
+
+.year-card:hover {
+    transform: translateY(-5px);
+    background: #51456f;
+}
+
+/* CONCERT CARDS */
+
+.latest-section {
+    background: #eeebf2;
+}
+
+.concert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.concert-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+    min-height: 0;
+    transition: 0.25s;
+}
+
+.concert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.concert-image {
+    display: block;
+    height: 230px;
+    overflow: hidden;
+}
+
+.concert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd7e8;
+    color: #51456f;
+}
+
+.concert-info {
+    padding: 25px;
+}
+
+.concert-info h3 {
+    font-size: 23px;
+    margin: 0 0 15px;
+}
+
+.concert-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #51456f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.all-concerts {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.outline-button {
+    border: 2px solid #51456f;
+    color: #51456f;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .concert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .year-grid,
+    .concert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-section {
+        padding: 50px 20px;
+    }
+}
+
+/* FIX HERO */
+
+.home-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    gap: 15px;
+}
+
+.home-hero .hero-label {
+    display: block;
+    width: auto;
+}
+
+.home-hero h1 {
+    margin: 0;
+    width: 100%;
+}
+
+.home-hero p {
+    max-width: 600px;
+    margin: 0;
+}
+
+.home-hero .hero-button {
+    margin-top: 15px;
+}
+
+
+/* ARCHIVE PAGE */
+
+.archive-hero {
+    background: linear-gradient(135deg, #191923, #35304d);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.archive-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.archive-hero h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    margin: 15px 0;
+}
+
+.archive-hero p {
+    color: #e0dce9;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.archive-hero .section-label {
+    color: #b6a5ed;
+    font-size: 12px;
+}
+
+/* CONTENT */
+
+.archive-section {
+    background: #f4f1f8;
+    padding: 70px 25px 90px;
+    min-height: 450px;
+}
+
+.archive-heading {
+    margin-bottom: 35px;
+}
+
+.archive-heading h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* BACK LINK */
+
+.archive-back {
+    margin-top: 50px;
+}
+
+.archive-back a {
+    color: #51456f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.archive-back a:hover {
+    text-decoration: underline;
+}
+
+/* PAGINATION */
+
+.archive-pagination {
+    margin-top: 40px;
+}
+
+.archive-pagination .nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.archive-pagination a,
+.archive-pagination .current {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: white;
+    color: #51456f;
+    text-decoration: none;
+}
+
+.archive-pagination .current {
+    background: #51456f;
+    color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .archive-hero {
+        padding: 65px 20px;
+    }
+
+    .archive-section {
+        padding: 45px 20px;
+    }
+}
+
+
+/* SINGLE CONCERT PAGE FIX */
+
+.single-concert {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.concert-detail {
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    display: flow-root;
+}
+
+.concert-detail h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    margin: 25px 0 35px;
+}
+
+/* CONTENT */
+
+.concert-content {
+    width: 100%;
+    line-height: 1.8;
+    font-size: 18px;
+    display: flow-root;
+}
+
+/* IMAGES */
+
+.concert-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 8px;
+}
+
+/* WORDPRESS IMAGE ALIGNMENT */
+
+.concert-content .alignleft,
+.concert-content .alignright,
+.concert-content .aligncenter {
+    float: none !important;
+    display: block;
+    margin: 25px auto;
+}
+
+.concert-content .wp-block-image {
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.concert-content .wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TEXT */
+
+.concert-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .single-concert {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .concert-detail {
+        padding: 25px;
+    }
+}
+
+
+/* UPCOMING CONCERTS */
+
+.upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.upcoming-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.upcoming-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.upcoming-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upcoming-info {
+    padding: 30px;
+}
+
+.upcoming-info h2 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.upcoming-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.upcoming-status {
+    display: inline-block;
+    background: #e5ddfa;
+    color: #51456f;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.upcoming-description {
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    .upcoming-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.upcoming-preview {
+    background: #302b43;
+    color: white;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.upcoming-preview h2 {
+    font-size: 36px;
+}
+
+.upcoming-preview p {
+    margin: 15px 0;
+}
