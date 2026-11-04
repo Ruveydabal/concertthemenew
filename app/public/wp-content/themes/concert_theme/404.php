@@ -8,7 +8,7 @@
 
         <p>
             Oops! This page doesn't exist.
-            Let's get you back to the music!
+            Let's get you back to the music!        
         </p>
 
         <a href="<?php echo esc_url(home_url('/')); ?>"

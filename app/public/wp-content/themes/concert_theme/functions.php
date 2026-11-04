@@ -25,7 +25,7 @@ function register_upcoming_concerts() {
         'rewrite' => array('slug' => 'upcoming'),
         'menu_icon' => 'dashicons-calendar-alt',
         'show_in_rest' => true,
-        'supports' => array(
+        'supports' => array(     
             'title',
             'editor',
             'thumbnail',
