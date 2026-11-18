@@ -1,18 +1,27 @@
 <?php
 
+// Deze functie zorgt ervoor dat de CSS van mijn thema wordt geladen.
 function concert_theme_styles() {
+
+    // welk CSS-bestand gebruikt 
     wp_enqueue_style(
         'concert-theme-style',
         get_stylesheet_uri()
     );
 }
 
+//extra mogelijkheden van thema aan.
 function concert_theme_setup() {
+
+    // afbeeldingen kunnen toevoegen aan berichten
     add_theme_support('post-thumbnails');
 }
 
+// maak eigen berichttype voor aankomende concerten.
+//Custom Post Type 
 function register_upcoming_concerts() {
 
+     //nieuw berichttype 
     register_post_type('upcoming_concert', array(
         'labels' => array(
             'name' => 'Upcoming Concerts',

@@ -2,12 +2,18 @@
 <?php get_header(); ?>
 
 <?php
+// Haalt naam op categorie 
 $category_name = single_cat_title('', false);
 
+
+// Controleert op categorie solo-concert 
 if (is_category('solo-concert')) {
+    
+    //beschrijving van solo-concert
     $page_title = 'Solo Concerts';
     $description = 'Concerts I experienced on my own.';
 } else {
+    //andere categorieën wordt naam automatisch 
     $page_title = $category_name . ' Concerts';
     $description = 'Explore all my concert experiences from ' . $category_name . '.';
 }
@@ -20,10 +26,13 @@ if (is_category('solo-concert')) {
         <p class="section-label">MY CONCERT ARCHIVE</p>
 
         <h1>
+
+        <!--titel van gekozen categorie -->
             <?php single_cat_title(); ?> Concerts
         </h1>
 
         <p>
+            <!-- Toont beschrijving -->
             Explore all my concert experiences
             from <?php single_cat_title(); ?>.
         </p>
@@ -41,14 +50,17 @@ if (is_category('solo-concert')) {
             <h2>Concerts from <?php single_cat_title(); ?></h2>
         </div>
 
+
+        <!-- FILTERING -->
         <?php if (have_posts()) : ?>
 
             <div class="concert-grid">
-
+                <!-- wordpress loop -->
                 <?php while (have_posts()) : the_post(); ?>
 
+                 <!-- een concert kaart-->
                     <article class="concert-card">
-
+                        <!-- link volledige concertpagina -->
                         <a href="<?php the_permalink(); ?>"
                            class="concert-image">
 
